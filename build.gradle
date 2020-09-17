@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+
+    // _______________________JPA__________________________________________________
+    // Notar que essa API nao faz o programa rodar, apenas valida as annotations (pois sao so as especificacoes)
+    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    // _______________________DRIVE JDBC___________________________________________
+    // Drive JDBC que sera utilizado pelos frameworks que implementam o JPA
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+    //________________________HIBERNATE____________________________________________
+    // Implementacao Hibernate
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
+
+    // Automatizador de criacao de Metamodels
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen
+    annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
