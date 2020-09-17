@@ -48,9 +48,9 @@ https://mvnrepository.com/artifact/mysql/mysql-connector-java
 3 - Utilizar as annotations nas classes que serão mapeadas para uso do Hibernate.
 
 4 - Configurar o entityManager
-
-5 - === CRIAR UMA TABELA ===
-============================
+    
+ MINHAS TABELA NO BANCO digital_innovation_one
+================================================
 
 1 - Acessar banco de dados. Pode ser workbench ou linha de comando (conforme o comando abaixo)
 mysql -u root -p
